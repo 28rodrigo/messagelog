@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  logsaver:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      - RABBITMQ_HOST=localhost
+      - RABBITMQ_PORT=5672
+      - RABBITMQ_USERNAME=guest
+      - RABBITMQ_PASSWORD=guest
+      - RABBITMQ_EXCHANGE=board
+      - RABBITMQ_ROUTING_KEY=logs.*

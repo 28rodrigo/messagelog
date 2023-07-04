@@ -1,0 +1,18 @@
+test
+Received message with routing key amq.gen-O5A09AvhvhN4rzX5OarS2A: test
+
+Received message with routing key logs.fb: test
+Received message with routing key logs.fb.st.te: test
+Date: <built-in method now of type object at 0x00007FFCB3821CD0> 
+
+Date: 2023-05-31 14:28:03 
+
+Received message with routing key logs.fb.st.te: test
+Received message with routing key logs.fb.st.te: test
+Received message with routing key logs.fb.st.te: test
+Received message with routing key logs.fb.st.te: test
+Received message with routing key logs.fb.st.te: test
+Received message with routing key logs.fb.st.te: test
+Received message with routing key logs.fb.st.te: test
+Received message with routing key logs.fb.st.te: test
+Received message with routing key logs.fb.st.te: test
