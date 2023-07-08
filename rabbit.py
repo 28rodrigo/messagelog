@@ -1,15 +1,16 @@
 import pika
 import datetime
 import os 
+
 # RabbitMQ connection parameters
-rabbitmq_host = os.environ.get('RABBITMQ_HOST', '192.168.28.86')
-rabbitmq_port = int(os.environ.get('RABBITMQ_PORT', '5672'))
-rabbitmq_username = os.environ.get('RABBITMQ_USERNAME', 'guest')
-rabbitmq_password = os.environ.get('RABBITMQ_PASSWORD', 'guest')
-rabbitmq_exchange = os.environ.get('RABBITMQ_EXCHANGE', 'board')
-rabbitmq_routing_key = os.environ.get('RABBITMQ_ROUTING_KEY', 'logs.*.*.*')
+rabbitmq_host = os.environ.get('RABBITMQ_HOST')
+rabbitmq_port = int(os.environ.get('RABBITMQ_PORT'))
+rabbitmq_username = os.environ.get('RABBITMQ_USERNAME')
+rabbitmq_password = os.environ.get('RABBITMQ_PASSWORD')
+rabbitmq_exchange = os.environ.get('RABBITMQ_EXCHANGE')
+rabbitmq_routing_key = os.environ.get('RABBITMQ_ROUTING_KEY')
 # File path to save the received messages
-output_file = 'received_messages.txt'
+output_file = 'rabbit_received_messages.txt'
 with open(output_file, 'a') as file:
         file.write(f'Date: {datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")} \n\n')
 def callback(ch, method, properties, body):

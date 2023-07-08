@@ -14,4 +14,4 @@ COPY main.py .
 # ENV RABBITMQ_EXCHANGE=board
 # ENV RABBITMQ_ROUTING_KEY=logs.*
 
-CMD ["python", "main.py"]
+CMD ["python", "rabbit.py"]
